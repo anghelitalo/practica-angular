@@ -7,12 +7,18 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import {MatButtonModule, MatMenuModule, MatToolbarModule, MatIconModule} from '@angular/material';
 import { LoginComponent } from './login/login.component'
 import {FormsModule} from '@angular/forms';
-import { DashboardComponent } from './dashboard/dashboard.component'
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { UsuariosComponent } from './usuarios/usuarios.component'
+import {UsuariosService} from './shared/Service/usuarios.service';
+import { UsuarioComponent } from './usuario/usuario.component'
+
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    DashboardComponent
+    DashboardComponent,
+    UsuariosComponent,
+    UsuarioComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +30,7 @@ import { DashboardComponent } from './dashboard/dashboard.component'
     MatToolbarModule,
     MatIconModule
   ],
-  providers: [],
+  providers: [UsuariosService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

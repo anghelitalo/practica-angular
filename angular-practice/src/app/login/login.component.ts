@@ -21,7 +21,7 @@ export class LoginComponent implements OnInit {
     //for now simulate the values
     if(form.value.email === 'admin@admin.com' && form.value.name === "12345"){
        localStorage.setItem( 'email', form.value.email);
-       this.router.navigate(['/dashboard']);
+       this.router.navigate(['/usuarios']);
     }
   }
 }

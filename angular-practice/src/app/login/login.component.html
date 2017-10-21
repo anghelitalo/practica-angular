@@ -1,5 +1,5 @@
 <form #loginForm= "ngForm" (ngSubmit)="login(loginForm)">
   <input type="text" name="email" id="email" placeholder="email" ngModel>
   <input type="password" name="password" id="password" placeholder="password" ngModel>
-  <button type="submit">Login</button>
+  <button type="submit" routerLinkActive="active" [routerLink]="['/usuarios']">Login</button>
 </form>
